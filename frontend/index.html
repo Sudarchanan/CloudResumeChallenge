@@ -22,32 +22,43 @@
 	</div>
 	<!-- header -->
 	<header class="header-section">
-		<div class="site-logo">
-			<h2>MS.</h2>
-			<p>Welcome, your the visitor number #<a id="counter"></a> :) </p> 
+		<div class="container">
+			<nav>
+				<div class="site-logo">
+					<h2>MS.</h2>
+					<!-- <p>Welcome, your the visitor number #<a id="counter"></a> :) </p>  -->
+				</div>
+				<div class="header-buttons">
+					<ul id="sidemenu">
+						<li><a href="https://www.linkedin.com/in/sudarchananms/" style="color:#0a66c2;"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://github.com/Sudarchanan" style="color: rgb(47, 50, 49);"><i class="fa fa-github"></i> </a></li>
+						<li><a href="#contact" class="site-btn" style="text-decoration: none;">Contact me</a></li>
+						<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+					</ul>
+					<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+			</nav>
 		</div>
-		<div class="header-buttons">
-			<a href="https://www.linkedin.com/in/sudarchananms/" style="color:#0a66c2;"><i
-					class="fa fa-linkedin"></i></a>
-			<a href="https://github.com/Sudarchanan" style="color: rgb(47, 50, 49);"><i class="fa fa-github"></i> </a>
-			<a href="#contact" class="site-btn1" style="text-decoration: none;">Contact me</a>
-		</div>
+		
 	</header>
 
 
 	<!-- intro -->
 	<section class="intro-section">
-		<div class="intro-text">
-			<h2>Sudarchanan MS</h2>
-			<p>I’m a Software Engineer in love with with solving complex problems, exploring new technologies, and
-				creating innovative solutions. My focus is on leveraging expertise in cloud computing and data analytics
-				to contribute valuable insights and drive strategic advancements in the field.</p>
+		<div class="container-fluid">
+			<div class="intro-text">
+				<h2>Sudarchanan MS</h2>
+				<p>I’m a Software Engineer in love with with solving complex problems, exploring new technologies, and
+					creating innovative solutions. My focus is on leveraging expertise in cloud computing and data analytics
+					to contribute valuable insights and drive strategic advancements in the field.</p>
+					
+			</div>
+			<div class="profile-image">
+				
+				<img src="img/profile.png" alt="profile">
+				
+			</div>
 		</div>
-		<div class="profile-image">
-			<!-- <figure class> -->
-			<img src="img/profile.png" alt="profile">
-			<!-- </figure> -->
-		</div>
+		
 	</section>
 	<!-- education -->
 	<section class="education-section">
@@ -160,10 +171,9 @@
 	<!-- contact -->
 	<section>
 		<div class="contact" id="contact">
-
 					<div class="contact-left">
 						<h2>Contact Me</h2>
-						<p><i class="fa-solid fa-paper-plane"></i> sudarchananms@gmail.com</p>
+						<p><i class="fa-solid fa-envelope"></i> sudarchananms@gmail.com</p>
 						<p><i class="fa-solid fa-square-phone"></i> +91 9361570062</p>
 						<p><i class="fa-solid fa-location-dot"></i> Tiruvannamalai,Tamilnadu</p>
 						<div class="social-icons">
@@ -178,7 +188,7 @@
 							<input type="text" name="Name" placeholder="Your Name" required>
 							<input type="text" name="Email" placeholder="Your Email" required>
 							<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-							<button type="submit" class="site-btn2">submit</button>
+							<button type="submit" class="site-btn2">Send Message</button>
 						</form>
 						<span id="msg"></span>
 					</div>
@@ -205,15 +215,21 @@
 				.catch(error => console.error('Error!', error.message))
 		})
 	</script>
+	<script>
+		var sidemenu =document.getElementById("sidemenu");
+		function openmenu(){
+			sidemenu.style.right = "0";
+		}
+		function closemenu() {
+
+  			sidemenu.style.right = "-200px";
+		}
+
+	</script>
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="js/main.js"></script>
 </body>
 
 </html>
 
-
-<!-- 
-	1.font
-	2.photo
- -->
