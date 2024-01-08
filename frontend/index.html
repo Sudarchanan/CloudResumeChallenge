@@ -9,8 +9,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<script src="https://kit.fontawesome.com/0fdfeb7742.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,10 +21,10 @@
 	<!-- header -->
 	<header class="header-section">
 		<div class="container">
-			<nav>
+			<nav style="display: flex;">
 				<div class="site-logo">
 					<h2>MS.</h2>
-					<!-- <p>Welcome, your the visitor number #<a id="counter"></a> :) </p>  -->
+					<p>Welcome, your visitor #<span id="counter" style="color: black;"></span></p> 
 				</div>
 				<div class="header-buttons">
 					<ul id="sidemenu">
@@ -36,30 +34,25 @@
 						<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
 					</ul>
 					<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+				</div>
 			</nav>
 		</div>
 		
 	</header>
-
-
 	<!-- intro -->
 	<section class="intro-section">
-		<div class="container-fluid">
+		
 			<div class="intro-text">
 				<h2>Sudarchanan MS</h2>
-				<p>I’m a Software Engineer in love with with solving complex problems, exploring new technologies, and
-					creating innovative solutions. My focus is on leveraging expertise in cloud computing and data analytics
-					to contribute valuable insights and drive strategic advancements in the field.</p>
-					
+				<p>I’m a Software Engineer in love with solving complex problems, exploring new technologies, and creating innovative solutions. My focus is on leveraging expertise in cloud computing and data analytics to contribute valuable insights and drive strategic advancements in the field.</p>
 			</div>
-			<div class="profile-image">
-				
-				<img src="img/profile.png" alt="profile">
-				
+			<div>
+				<img class="profile-image" src="img/profile.png" alt="profile">
 			</div>
-		</div>
+			
 		
 	</section>
+	
 	<!-- education -->
 	<section class="education-section">
 		<div class="container-fluid">
@@ -196,7 +189,7 @@
 
 	</section>
 
-	<!-- js -->
+	<!--- js --->
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbyhHCsS2jcCkWHxT3c-XENW6O50NW4xsTZXisatF9tbl9C56602VJOTOeC0URICvjZuWg/exec'
 		const form = document.forms['submit-to-google-sheet']
@@ -227,7 +220,6 @@
 
 	</script>
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="js/main.js"></script>
 </body>
 
