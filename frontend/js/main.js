@@ -8,9 +8,9 @@ window.addEventListener("DOMContentLoaded", (Event) => {
   getVisitCount();
 });
 
-// const ProductionUrl = "https://resumechallenge1.azurewebsites.net/api/main";
+const ProductionUrl = "FUNCTION APP URL";
 const LocalApiUrl = "";
-const ApiUrl = "";
+const ApiUrl = ProductionUrl;
 
 const getVisitCount = () => {
   let count = "";
