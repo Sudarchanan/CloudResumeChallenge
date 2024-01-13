@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", (Event) => {
   getVisitCount();
 });
 
-const ProductionUrl = "FUNCTION APP URL";
+const ProductionUrl = "FUNCTION URL";
 const LocalApiUrl = "";
 const ApiUrl = ProductionUrl;
 
@@ -18,8 +18,7 @@ const getVisitCount = () => {
     .then((response) => response.json())
     .then((msg) => {
       console.log("API  Called");
-      console.log(data);
-      count = msg;
+      count = msg[0].updated_count;
       document.getElementById("counter").innerText = count;
     })
     .catch(function (error) {
