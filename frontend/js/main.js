@@ -1,42 +1,28 @@
-document.addEventListener("DOMContentLoaded", function(){
-    try{
-        let count = localStorage.getItem("VisitorCounter") || 0;
-        count++;
-        document.getElementById("counter").textContent = count;
-        localStorage.setItem("visitorCount", count);
-    }
-    catch (error) {
-        console.error("Error in visitor counter script:", error);
-    }
-    
-})
+$(window).on("load", function () {
+  /*Preloder*/
+  $(".loader").fadeOut();
+  $("#preloder").delay(400).fadeOut("slow");
+});
 
+window.addEventListener("DOMContentLoaded", (Event) => {
+  getVisitCount();
+});
 
- $(window).on('load', function() { 
-	 /*Preloder*/
-	 $(".loader").fadeOut(); 
-	 $("#preloder").delay(400).fadeOut("slow");
- 
- });
- 
-// window.addEventListener('DOMContentLoaded', (event) =>{
-//     getVisitCount();
-// })
+// const ProductionUrl = "https://resumechallenge1.azurewebsites.net/api/main";
+const LocalApiUrl = "";
+const ApiUrl = "";
 
-// const productionApiUrl = '';
-// const localApiUrl = '';
-
-// const getVisitCount = () => {
-//     let count = 30;
-//     fetch(productionApiUrl).then(response => {
-//         return response.json()
-//     }).then(response =>{
-//         console.log("Website called function API.");
-//         count =  response.count;
-//         document.getElementById("counter").innerText = count;
-//     }).catch(function(error){
-//         console.log(error);
-//     });
-//     return count;
-// }
- 
+const getVisitCount = () => {
+  let count = "";
+  fetch(ApiUrl)
+    .then((response) => response.json())
+    .then((msg) => {
+      console.log("API  Called");
+      console.log(data);
+      count = msg;
+      document.getElementById("counter").innerText = count;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
