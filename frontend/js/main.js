@@ -1,5 +1,6 @@
 $(window).on("load", function () {
   /*Preloder*/
+  // css
   $(".loader").fadeOut();
   $("#preloder").delay(400).fadeOut("slow");
 });
@@ -8,6 +9,7 @@ window.addEventListener("DOMContentLoaded", (Event) => {
   getVisitCount();
 });
 
+// requesting az api function
 const ProductionUrl = "FUNCTION URL";
 const LocalApiUrl = "";
 const ApiUrl = ProductionUrl;
