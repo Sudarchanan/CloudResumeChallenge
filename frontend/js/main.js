@@ -9,12 +9,7 @@ window.addEventListener("DOMContentLoaded", (Event) => {
   getVisitCount();
 });
 
-<<<<<<< HEAD
-const ProductionUrl = "https://resumechallenge1.azurewebsites.net/api/main";
-=======
-// requesting az api function
-const ProductionUrl = "FUNCTION URL";
->>>>>>> 2d9eee10808168a2d4df99106ac6ccb8b52f5ad7
+
 const LocalApiUrl = "";
 const ApiUrl = ProductionUrl;
 
